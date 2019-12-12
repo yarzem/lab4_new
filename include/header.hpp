@@ -132,12 +132,15 @@ public:
             }
             if (is_regular_file(x) == true)
             {
-                if (check_format(boost::filesystem::basename(x.path().filename())
-                + boost::filesystem::extension(x.path().extension()))
+                if (check_format(boost::filesystem::basename
+                (x.path().filename())
+                + boost::filesystem::extension
+                (x.path().extension()))
                 == true)
                 {
                     _owner =
-                    boost::filesystem::path(x.path().string()).parent_path().filename().string();
+                    boost::filesystem::path
+                    (x.path().string()).parent_path().filename().string();
                     if (checker.find(_account) != checker.end())
                     {
                         ++checker[_account]._count;
