@@ -72,9 +72,7 @@ public:
         if (str.find("balance_") != 0)
         {
             return false;
-        }
-        else
-        {
+        } else {
             int counter = str.find("balance_") + strlen("balance_");
             if (check_for_delimiter(str[counter-1]) == false)
             {
@@ -165,12 +163,11 @@ public:
                               " "<<
                               checker[_account]._count<<
                               std::endl;
-                    _account="";
+                    _account = "";
                 }
             }
         }
     }
-
 };
 
 #endif // INCLUDE_HEADER_HPP_
