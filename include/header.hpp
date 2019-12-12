@@ -6,7 +6,8 @@
 #include <boost/filesystem.hpp>
 #include <string.h>
 #include <map>
-using namespace boost::filesystem;
+using boost::filesystem::path;
+using boost::filesystem::directory_entry;
 using std::map;
 struct characteristics
 {
