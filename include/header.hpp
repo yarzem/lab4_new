@@ -73,7 +73,7 @@ public:
         {
             return false;
         }
-        else 
+        else
         {
             int counter = str.find("balance_") + strlen("balance_");
             if (check_for_delimiter(str[counter-1]) == false)
@@ -150,9 +150,7 @@ public:
                             checker[_account]._date = _date;
                             checker[_account]._owner = _owner;
                         }
-                    }
-                    else 
-                    {
+                    } else {
                         struct characteristics a(_owner , _date , 1);
                         checker.insert({_account , a});
                     }
