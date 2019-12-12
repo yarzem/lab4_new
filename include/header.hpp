@@ -73,14 +73,13 @@ public:
         {
             return false;
         }
-        else
-        {
+        else{
             int counter = str.find("balance_") + strlen("balance_");
             if (check_for_delimiter(str[counter-1]) == false)
             {
                 return false;
             }
-            for (int i = 0;i < 8;++i)
+            for (int i = 0; i < 8; ++i)
             {
                 if (check_for_num(str[counter+i]) == false){ return false;}
                 _account += str[counter+i];
@@ -110,7 +109,7 @@ public:
                 return false;
             }
             counter += 4;
-            if (str.find(".txt")!=(str.length() - 4))
+            if (str.find(".txt") != (str.length() - 4))
             {
                 return false;
             }
@@ -134,10 +133,11 @@ public:
             if (is_regular_file(x) == true)
             {
                 if (check_format(boost::filesystem::basename(x.path().filename())
-                + boost::filesystem::extension(x.path().extension())) == true)
+                + boost::filesystem::extension(x.path().extension()))
+                == true)
                 {
-                    _owner = boost::filesystem::path(x.path().string()).parent_path().filename().string();
-
+                    _owner =
+                    boost::filesystem::path(x.path().string()).parent_path().filename().string();
                     if (checker.find(_account) != checker.end())
                     {
                         ++checker[_account]._count;
@@ -147,9 +147,8 @@ public:
                             checker[_account]._owner = _owner;
                         }
                     }
-                    else
-                    {
-                        struct characteristics a (_owner , _date , 1);
+                    else{
+                        struct characteristics a(_owner , _date , 1);
                         checker.insert({_account , a});
                     }
                     std::cout <<
