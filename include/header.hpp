@@ -9,6 +9,7 @@
  #include <string>
 using boost::filesystem::path;
 using boost::filesystem::directory_entry;
+using boost::filesystem::directory_iterator;
 using std::map;
 struct characteristics
 {
