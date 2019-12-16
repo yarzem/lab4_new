@@ -9,7 +9,6 @@ TEST(SharedPtr, value )
     tmp.read_dir("/home/travis/build/Sergei2000/filework/tests");
     EXPECT_EQ((std::string) checker["00001234"]._owner, "testdir");
     EXPECT_EQ((int) checker["00001346"]._count, 2);
-    EXPECT_EQ((std::string) checker["00001346"]._owner, "sanya");
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
