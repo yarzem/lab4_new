@@ -7,7 +7,7 @@ TEST(SharedPtr, value )
 {
     otchet tmp;
     tmp.read_dir(".");
-    EXPECT_EQ(checker["00001234"]._count, 1);
+    EXPECT_EQ(std::string checker["00001234"]._owner, "testdir");
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);

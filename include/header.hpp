@@ -30,7 +30,7 @@ public:
     std::string _account = "";
     std::string _date;
     std::string _owner;
-    path _start{"/home/sergei/Desktop/testdir"};
+    path _start{"."};
     bool check_for_delimiter(char str)
     {
         if (str != '_')
