@@ -1,7 +1,17 @@
 // Copyright 2018 Your Name <your_email>
 
 #include <gtest/gtest.h>
+#include <header.hpp>
 
-TEST(Example, EmptyTest) {
-    EXPECT_TRUE(true);
+TEST(SharedPtr, value )
+{
+    
+     otchet tmp;
+    tmp.read_dir(".");
+    
+    EXPECT_EQ(checker["00001234"]._count, 1);
+}
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
