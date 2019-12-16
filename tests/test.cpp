@@ -5,10 +5,8 @@
 
 TEST(SharedPtr, value )
 {
-    
-     otchet tmp;
+    otchet tmp;
     tmp.read_dir(".");
-    
     EXPECT_EQ(checker["00001234"]._count, 1);
 }
 int main(int argc, char **argv) {
