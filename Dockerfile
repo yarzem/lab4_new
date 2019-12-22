@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:18.04
 LABEL maintainer="rusdevops@gmail.com"
 
 RUN apt update && apt install -y software-properties-common && \
