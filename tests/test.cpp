@@ -6,7 +6,7 @@
 TEST(SharedPtr, value )
 {
     otchet tmp;
-    tmp.read_dir("/home/travis/build/Sergei2000/filework/tests");
+    tmp.read_dir("/home/travis/build/yarzem/filework/tests");
     EXPECT_EQ((std::string) checker["00001234"]._owner, "testdir");
     EXPECT_EQ((int) checker["00001346"]._count, 2);
 }
